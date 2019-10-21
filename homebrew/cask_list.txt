@@ -1,0 +1,8 @@
+docker
+figma
+firefox
+google-chrome
+macvim
+nordvpn
+slack
+spotify

@@ -1,2 +1,2 @@
 # dotfiles
-Contains dotfiles from different stuff I use
+Dotfiles are configuration files, here are my configuration files for different stuff I use (or have used).

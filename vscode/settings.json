@@ -1,0 +1,71 @@
+{
+    "workbench.iconTheme": "vscode-icons",
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "editor.minimap.enabled": false,
+    "zenMode.centerLayout": false,
+    "zenMode.hideStatusBar": false,
+    "zenMode.hideActivityBar": false,
+    "breadcrumbs.enabled": false,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "workbench.colorTheme": "Atom Material Theme",
+    "javascript.suggest.autoImports": false,
+    "window.zoomLevel": 0,
+    "editor.fontFamily": "Fira Code",
+    "terminal.integrated.fontFamily": "monospace",
+    "editor.fontLigatures": true,
+    "vim.incsearch": true,
+    "editor.renderWhitespace": "none",
+    "zenMode.hideLineNumbers": false,
+    "terminal.integrated.shell.windows": "C:\\Windows\\System32\\cmd.exe",
+    "files.autoSave": "off",
+    "vim.leader": "<space>",
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                ">"
+            ],
+            "commands": [
+                "editor.action.indentLines"
+            ]
+        },
+        {
+            "before": [
+                "<"
+            ],
+            "commands": [
+                "editor.action.outdentLines"
+            ]
+        },
+        {
+            "before": ["leader", "w"],
+            "commands": [
+                "workbench.action.files.save"
+            ]
+        },
+        {
+            "before": ["leader", "f"],
+            "commands": [
+                "workbench.action.quickOpen"
+            ]
+        },
+        {
+            "before": ["leader", ":"],
+            "commands": [
+                "workbench.action.showCommands"
+            ]
+        },
+        {
+            "before": ["leader", "r"],
+            "commands": [
+                "editor.action.startFindReplaceAction"
+            ]
+        },
+        {
+            "before": ["<C-w>"],
+            "commands": [
+                "workbench.action.closeWindow"
+            ]
+        }
+    ]
+}
