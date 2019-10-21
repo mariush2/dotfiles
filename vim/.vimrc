@@ -78,10 +78,8 @@ set splitright
 map <C-n> :NERDTreeToggle<CR>
 
 " Make undo if I fuck up after save
-if has("persistent_undo")
-	set undodir=~/.vim/undo_dir
-	set undofile
-endif
+set undofile
+set undodir=~/.vim/undo_dir
 
 " Show line numbers in editor
 set number
