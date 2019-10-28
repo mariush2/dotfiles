@@ -5,10 +5,10 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
+	Plug 'ycm-core/YouCompleteMe'
 	Plug 'prettier/vim-prettier'
 	Plug 'hzchirs/vim-material'
 	Plug 'dikiaap/minimalist'
-	Plug 'rakr/vim-two-firewatch'
 	Plug 'w0rp/ale'
 	Plug 'sheerun/vim-polyglot'
 	Plug 'scrooloose/nerdtree'
