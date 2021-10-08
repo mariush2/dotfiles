@@ -5,12 +5,8 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
-	Plug 'ycm-core/YouCompleteMe'
-	Plug 'prettier/vim-prettier'
 	Plug 'hzchirs/vim-material'
 	Plug 'dikiaap/minimalist'
-	Plug 'w0rp/ale'
-	Plug 'sheerun/vim-polyglot'
 	Plug 'scrooloose/nerdtree'
 	Plug 'Xuyuanp/nerdtree-git-plugin'
 	Plug 'gorodinskiy/vim-coloresque'
@@ -18,10 +14,6 @@ call plug#begin('~/.vim/plugged')
 	Plug 'tpope/vim-surround'
 	Plug 'vim-airline/vim-airline'
 	Plug 'ryanoasis/vim-devicons'
-	Plug 'wakatime/vim-wakatime'
-	Plug '/usr/local/opt/fzf'
-	Plug 'junegunn/fzf.vim'
-	Plug 'junegunn/goyo.vim'
 call plug#end()
 
 " Fixes colours
@@ -43,7 +35,7 @@ syntax on
 
 set t_Co=256
 set encoding=UTF-8
-set guifont=Fura\ Code\ Retina\ Nerd\ Font\ Complete:h12
+set guifont=Fira\ Code\ Retina\ Nerd\ Font\ Complete:h12
 
 " Set vim theme
 colorscheme minimalist 
@@ -94,46 +86,14 @@ augroup number relativenumber
 	autocmd BufLeave,FocusLost,InsertEnter * set norelativenumber
 augroup END
 
-" Mappings to more easily navigate split panes
-nnoremap <leader>h <C-W>h
-nnoremap <leader>j <C-W>j
-nnoremap <leader>k <C-W>k
-nnoremap <leader>l <C-W>l
-
-" Open vimrc and edit
-nnoremap <leader>ev :tabnew $MYVIMRC<cr>
-
-"Source vimrc
-nnoremap <leader>sv :source $MYVIMRC<cr>
-
 "Save current file
 nnoremap <leader>w :w<cr>
-
-" fzf mappings
-nmap <leader>f :Files<cr>    " fuzzy find files in the working directory (where you launched Vim from)
-nmap <leader>/ :BLines<cr>   " fuzzy find lines in the current file
-nmap <leader>b :Buffers<cr>  " fuzzy find an open buffer
-nmap <leader>r :Rg<cr>       " fuzzy find text in the working directory
-nmap <leader>c :Commands<cr> " fuzzy find Vim commands (like Ctrl-Shift-P in Sublime/Atom/VSC)
 
 " Change cursor for the different modes (This is specific for iTerm2 on OS X)
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 let &t_SR = "\<Esc>]50;CursorShape=2\x7"
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
-" Changing tabs more IDE like
-nnoremap <leader><Tab> gt<cr>
-
-" Toggle distraction free writing for taking notes
-nnoremap <C-g> :Goyo<cr>
-
 " Add mappings for adding blanklines
 nnoremap <Enter> o<ESC>
 nnoremap <S-Enter> O<ESC>
-
-" vim-prettier setup
-" Force async
-let g:prettier#exec_cmd_async = 1
-
-" Disable auto-commenting when in insert mode
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o

@@ -149,4 +149,3 @@ function __done_uninstall -e done_uninstall
   # Erase __done variables
   set -e __done_version
 end
-
