@@ -1,114 +1,92 @@
 {
     "vim.leader": " ",
     "vim.handleKeys": {
-        "<C-d>": true
+      "<C-d>": true
     },
     "vim.normalModeKeyBindingsNonRecursive": [
-        {
-            "before": [
-                ">"
-            ],
-            "commands": [
-                "editor.action.indentLines"
-            ]
-        },
-        {
-            "before": [
-                "<"
-            ],
-            "commands": [
-                "editor.action.outdentLines"
-            ]
-        },
-        {
-            "before": [
-                "leader",
-                "w"
-            ],
-            "commands": [
-                "workbench.action.files.save"
-            ]
-        },
-        {
-            "before": [
-                "leader",
-                "f"
-            ],
-            "commands": [
-                "workbench.action.quickOpen"
-            ]
-        },
-        {
-            "before": [
-                "leader",
-                ":"
-            ],
-            "commands": [
-                "workbench.action.showCommands"
-            ]
-        },
-        {
-            "before": [
-                "leader",
-                "r"
-            ],
-            "commands": [
-                "editor.action.startFindReplaceAction"
-            ]
-        },
-        {
-            "before": [
-                "<C-w>"
-            ],
-            "commands": [
-                "workbench.action.closeWindow"
-            ]
-        },
-        {
-            "before": [
-                "leader",
-                "y"
-            ],
-            "after": [
-                "g",
-                "v",
-                "y"
-            ]
-        },
+      {
+        "before": [">"],
+        "commands": ["editor.action.indentLines"]
+      },
+      {
+        "before": ["<"],
+        "commands": ["editor.action.outdentLines"]
+      },
+      {
+        "before": ["leader", "w"],
+        "commands": ["workbench.action.files.save"]
+      },
+      {
+        "before": ["leader", "f"],
+        "commands": ["workbench.action.quickOpen"]
+      },
+      {
+        "before": ["leader", ":"],
+        "commands": ["workbench.action.showCommands"]
+      },
+      {
+        "before": ["leader", "r"],
+        "commands": ["editor.action.startFindReplaceAction"]
+      },
+      {
+        "before": ["<C-w>"],
+        "commands": ["workbench.action.closeWindow"]
+      },
+      {
+        "before": ["leader", "y"],
+        "after": ["g", "v", "y"]
+      }
     ],
     "editor.fontLigatures": true,
-    "terminal.integrated.commandsToSkipShell": [
-        "language-julia.interrupt"
-    ],
+    "terminal.integrated.commandsToSkipShell": ["language-julia.interrupt"],
     "julia.enableTelemetry": true,
     "diffEditor.codeLens": true,
     "editor.minimap.enabled": false,
     "workbench.iconTheme": "helium-icon-theme",
     "vsicons.dontShowNewVersionMessage": true,
     "[vue]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "editor.formatOnSave": true,
     "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "git.ignoreMissingGitWarning": true,
     "git.enableCommitSigning": true,
     "editor.fontFamily": "Fira Code",
     "[typescriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "javascript.updateImportsOnFileMove.enabled": "always",
-    "window.zoomLevel": 2,
     "debug.onTaskErrors": "debugAnyway",
     "plantuml.exportSubFolder": false,
     "plantuml.exportOutDir": "./",
     "redhat.telemetry.enabled": true,
-    "workbench.colorTheme": "Monterey Theme",
-    "eslint.packageManager": "yarn",
     "eslint.alwaysShowStatus": true,
-    "eslint.validate": [ "javascript", "javascriptreact", "html", "typescript", "typescriptreact" ],
+    "eslint.validate": [
+      "javascript",
+      "javascriptreact",
+      "html",
+      "typescript",
+      "typescriptreact"
+    ],
     "eslint.lintTask.enable": true,
     "eslint.run": "onSave",
-    "security.workspace.trust.untrustedFiles": "open"
-}
+    "security.workspace.trust.untrustedFiles": "open",
+    "prettier.configPath": ".prettierrc.js",
+    "[svelte]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "svelte.enable-ts-plugin": true,
+    "[typescript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "workbench.colorTheme": "Catppuccin",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "explorer.confirmDragAndDrop": false,
+    "eslint.debug": true,
+    "julia.symbolCacheDownload": true,
+    "window.zoomLevel": 2
+  }
+  
