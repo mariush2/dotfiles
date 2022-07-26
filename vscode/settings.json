@@ -1,92 +1,120 @@
 {
-    "vim.leader": " ",
-    "vim.handleKeys": {
-      "<C-d>": true
+  "vim.leader": " ",
+  "vim.handleKeys": {
+    "<C-d>": true
+  },
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [">"],
+      "commands": ["editor.action.indentLines"]
     },
-    "vim.normalModeKeyBindingsNonRecursive": [
-      {
-        "before": [">"],
-        "commands": ["editor.action.indentLines"]
-      },
-      {
-        "before": ["<"],
-        "commands": ["editor.action.outdentLines"]
-      },
-      {
-        "before": ["leader", "w"],
-        "commands": ["workbench.action.files.save"]
-      },
-      {
-        "before": ["leader", "f"],
-        "commands": ["workbench.action.quickOpen"]
-      },
-      {
-        "before": ["leader", ":"],
-        "commands": ["workbench.action.showCommands"]
-      },
-      {
-        "before": ["leader", "r"],
-        "commands": ["editor.action.startFindReplaceAction"]
-      },
-      {
-        "before": ["<C-w>"],
-        "commands": ["workbench.action.closeWindow"]
-      },
-      {
-        "before": ["leader", "y"],
-        "after": ["g", "v", "y"]
-      }
-    ],
-    "editor.fontLigatures": true,
-    "terminal.integrated.commandsToSkipShell": ["language-julia.interrupt"],
-    "julia.enableTelemetry": true,
-    "diffEditor.codeLens": true,
-    "editor.minimap.enabled": false,
-    "workbench.iconTheme": "helium-icon-theme",
-    "vsicons.dontShowNewVersionMessage": true,
-    "[vue]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    {
+      "before": ["<"],
+      "commands": ["editor.action.outdentLines"]
     },
-    "editor.formatOnSave": true,
-    "[javascript]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    {
+      "before": ["leader", "w"],
+      "commands": ["workbench.action.files.save"]
     },
-    "git.ignoreMissingGitWarning": true,
-    "git.enableCommitSigning": true,
-    "editor.fontFamily": "Fira Code",
-    "[typescriptreact]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    {
+      "before": ["leader", "f"],
+      "commands": ["workbench.action.quickOpen"]
     },
-    "javascript.updateImportsOnFileMove.enabled": "always",
-    "debug.onTaskErrors": "debugAnyway",
-    "plantuml.exportSubFolder": false,
-    "plantuml.exportOutDir": "./",
-    "redhat.telemetry.enabled": true,
-    "eslint.alwaysShowStatus": true,
-    "eslint.validate": [
-      "javascript",
-      "javascriptreact",
-      "html",
-      "typescript",
-      "typescriptreact"
-    ],
-    "eslint.lintTask.enable": true,
-    "eslint.run": "onSave",
-    "security.workspace.trust.untrustedFiles": "open",
-    "prettier.configPath": ".prettierrc.js",
-    "[svelte]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    {
+      "before": ["leader", ":"],
+      "commands": ["workbench.action.showCommands"]
     },
-    "svelte.enable-ts-plugin": true,
-    "[typescript]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    {
+      "before": ["leader", "r"],
+      "commands": ["editor.action.startFindReplaceAction"]
     },
-    "workbench.colorTheme": "Catppuccin",
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "typescript.updateImportsOnFileMove.enabled": "always",
-    "explorer.confirmDragAndDrop": false,
-    "eslint.debug": true,
-    "julia.symbolCacheDownload": true,
-    "window.zoomLevel": 2
-  }
-  
+    {
+      "before": ["leader", "q"],
+      "commands": ["workbench.action.closeWindow"]
+    },
+    {
+      "before": ["leader", "y"],
+      "after": ["g", "v", "y"]
+    }
+  ],
+  "editor.fontLigatures": true,
+  "terminal.integrated.commandsToSkipShell": ["language-julia.interrupt"],
+  "diffEditor.codeLens": true,
+  "editor.minimap.enabled": false,
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.formatOnSave": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "git.ignoreMissingGitWarning": true,
+  "git.enableCommitSigning": true,
+  "editor.fontFamily": "Fira Code",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "debug.onTaskErrors": "debugAnyway",
+  "redhat.telemetry.enabled": true,
+  "eslint.alwaysShowStatus": true,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "html",
+    "typescript",
+    "typescriptreact"
+  ],
+  "eslint.lintTask.enable": true,
+  "eslint.run": "onSave",
+  "security.workspace.trust.untrustedFiles": "open",
+  "prettier.configPath": ".prettierrc.js",
+  "[svelte]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "explorer.confirmDragAndDrop": false,
+  "eslint.debug": true,
+  "workbench.iconTheme": "helium-icon-theme",
+  "workbench.colorTheme": "Tokyo Night Storm",
+  "explorer.experimental.fileNesting.patterns": {
+    "*.ts": "${capture}.js, ${capture}.test.ts",
+    "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+    "*.jsx": "${capture}.js",
+    "*.tsx": "${capture}.ts, ${capture}.test.tsx",
+    "tsconfig.json": "tsconfig.*.json",
+    "package.json": "package-lock.json, yarn.lock"
+  },
+  "editor.suggest.preview": true,
+  "workbench.editor.enablePreviewFromQuickOpen": true,
+  "workbench.editor.pinnedTabSizing": "shrink",
+  "workbench.editor.showTabs": false,
+  "terminal.explorerKind": "external",
+  "debug.terminal.clearBeforeReusing": true,
+  "terminal.external.osxExec": "Iterm.app",
+  "find-it-faster.findFiles.previewCommand": "bat --theme=Dracula --color=always --decorations=always --plain {}",
+  "window.restoreWindows": "none",
+  "terminal.integrated.persistentSessionReviveProcess": "never",
+  "find-it-faster.general.showMaximizedTerminal": true,
+  "problems.showCurrentInStatus": true,
+  "explorer.fileNesting.patterns": {
+    "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+    "*.jsx": "${capture}.js",
+    "*.tsx": "${capture}.ts, ${capture}.test.tsx",
+    "tsconfig.json": "tsconfig.*.json",
+    "package.json": "package-lock.json, yarn.lock",
+    "*.ts": "${capture}.test.ts"
+  },
+  "explorer.fileNesting.enabled": true,
+  "window.zoomLevel": 1,
+  "editor.accessibilitySupport": "off",
+  "vim.useSystemClipboard": true,
+  "vim.vimrc.enable": true,
+  "zenMode.hideStatusBar": false,
+  "zenMode.hideTabs": false
+}
+
