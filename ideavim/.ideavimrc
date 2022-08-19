@@ -5,16 +5,15 @@ let mapleader=" "
 set surround
 set multiple-cursors
 set commentary
-set ReplaceWithRegister
-set easymotion
 
 " Mappings
 map ff <Action>(GotoFile)
-map <leader>f <Plug>(easymotion-f)
-map <leader>F <Plug>(easymotion-s)
+map <leader>f <Action>(Find)
 map <leader>g <Action>(FindInPath)
 map <leader>b <Action>(Git.Branches)
-map <leader>w <Action>(SaveDocument)
+map <leader>w <Action>(SaveAll)
 map <leader>r <Action>(RefactoringMenu)
 map <leader>d <Action>(Debug)
-
+map <leader>n <Action>(ShowNavBar)
+map <leader>e <Action>(GotoNextError)
+map <leader>z <Action>(ToggleDistractionFreeMode)
