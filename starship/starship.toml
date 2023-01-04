@@ -1,7 +1,14 @@
 # ~/.config/starship.toml
 
+command_timeout = 1000
+
 [battery]
-full_symbol = "🔋"
-charging_symbol = "🔌"
+full_symbol = "🔋 "
+charging_symbol = "🔌 "
 
+[[battery.display]]
+threshold = 10
 
+[[battery.display]]
+threshold = 50
+style = "yellow"
