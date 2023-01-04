@@ -5,7 +5,9 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
-	Plug 'hzchirs/vim-material'
+	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+	Plug 'junegunn/fzf.vim'
+	Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 	Plug 'dikiaap/minimalist'
 	Plug 'scrooloose/nerdtree'
 	Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -14,6 +16,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'tpope/vim-surround'
 	Plug 'vim-airline/vim-airline'
 	Plug 'ryanoasis/vim-devicons'
+	Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 call plug#end()
 
 " Fixes colours
@@ -37,8 +40,11 @@ set t_Co=256
 set encoding=UTF-8
 set guifont=Fira\ Code\ Retina\ Nerd\ Font\ Complete:h12
 
+" Config tokyonight theme
+let g:tokyonight_style = "night"
+
 " Set vim theme
-colorscheme minimalist 
+colorscheme tokyonight 
 
 " Theme specific js
 let g:javascript_plugin_flow = 1

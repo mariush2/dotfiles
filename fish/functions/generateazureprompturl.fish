@@ -17,7 +17,7 @@ function generateazureprompturl
     read redirect_uri
 
     if test $tenantID = ""
-        set -f tenantID "<default-tenant-id>"
+        set -f tenantID "3aa4a235-b6e2-48d5-9195-7fcf05b459b0"
     else
         echo "tenantID was manually set, using $tenantID as tenantID"
     end

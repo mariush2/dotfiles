@@ -20,3 +20,6 @@ alias gp "git add . -p"
 alias commit "gitmoji --commit"
 
 corepack enable
+
+# Init zoxide
+zoxide init fish | source

@@ -1,9 +1,0 @@
-package bass
-package fzf
-package https://github.com/PatrickF1/fzf.fish.git
-theme agnoster
-theme ays
-theme bobthefish
-theme boxfish
-theme default
-theme pure
