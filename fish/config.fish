@@ -1,5 +1,5 @@
 starship init fish | source
-set PATH /Users/marius.tobiassen/.nvm/versions/node/v18.0.0/bin $PATH
+set PATH /Users/marius.tobiassen/.nvm/versions/node/v19.6.0/bin $PATH
 
 set -x CLICOLOR 1
 set -x TERM xterm-256color
@@ -23,3 +23,7 @@ corepack enable
 
 # Init zoxide
 zoxide init fish | source
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH
