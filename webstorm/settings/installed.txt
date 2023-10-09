@@ -1,0 +1,9 @@
+com.github.patou.gitmoji
+com.markskelton.one-dark-theme
+dev.meanmail.plugin.nginx-intellij-plugin
+ru.adelf.idea.dotenv
+com.intellij.swagger
+com.vermouthx.idea
+IdeaVIM
+mobi.hsz.idea.gitignore
+mdx.js
