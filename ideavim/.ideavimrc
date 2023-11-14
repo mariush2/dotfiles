@@ -18,3 +18,20 @@ map <leader>n <Action>(ShowNavBar)
 map <leader>e <Action>(GotoNextError)
 map <leader>z <Action>(ToggleDistractionFreeMode)
 map rr <Action>(RunClass)
+map tt <Action>(ActivateTerminalToolWindow)
+map fu <Action>(FindUsages)
+
+" Styled components to 6 function
+function StyledComponents(amountOfProps)
+  let count = 0
+  while count < a:amountOfProps
+    let count += 1
+    execute 'normal! 0 w'
+    let variableName = expand('<cword>')
+    let lineNumber = line(".")
+    execute "normal! 0"
+    execute '%s/' . variableName . '/$' . variableName . '/g'
+    execute 'normal! :' . lineNumber . "<cr>"
+    execute "normal! j"
+  endwhile
+endfunction

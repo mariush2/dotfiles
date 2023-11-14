@@ -1,5 +1,5 @@
 starship init fish | source
-set PATH /Users/marius.tobiassen/.nvm/versions/node/v19.6.0/bin $PATH
+set PATH /Users/marius.tobiassen/.nvm/versions/node/v21.0.0/bin $PATH
 
 set -x CLICOLOR 1
 set -x TERM xterm-256color

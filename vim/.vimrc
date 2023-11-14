@@ -103,3 +103,21 @@ let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 " Add mappings for adding blanklines
 nnoremap <Enter> o<ESC>
 nnoremap <S-Enter> O<ESC>
+
+" Source vimrc
+nnoremap <leader>sv :source ~/.vimrc<cr>
+
+" Styled components to 6 function
+function StyledComponents(amountOfProps)
+  let count = 0
+  while count < a:amountOfProps
+    let count += 1
+    execute 'normal! 0 w'
+    let variableName = expand('<cword>')
+    let lineNumber = line(".")
+    execute "normal! 0"
+    execute '%s/' . variableName . '/$' . variableName . '/g'
+    execute "normal! :" . lineNumber . "<cr>"
+    execute "normal! j"
+  endwhile
+endfunction
