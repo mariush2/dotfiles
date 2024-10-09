@@ -20,6 +20,7 @@ map <leader>z <Action>(ToggleDistractionFreeMode)
 map rr <Action>(RunClass)
 map tt <Action>(ActivateTerminalToolWindow)
 map fu <Action>(FindUsages)
+map <leader>q <Action>(ShowIntentionActions)
 
 " Styled components to 6 function
 function StyledComponents(amountOfProps)
